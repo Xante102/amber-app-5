@@ -4,7 +4,6 @@ export class Student {
   email: string;
   phoneNumber: number;
   cohort: number;
-  // results: any;
 
   constructor(_id?: string, name?: string, email?: string, phoneNumber?: number, cohort?: number) {
     this._id = _id!;

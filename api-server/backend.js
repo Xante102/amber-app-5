@@ -3,8 +3,6 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const path = require("path");
-const studentsRouter = require("./routes/students-route");
-const accountsRouter = require("./routes/accounts-route");
 
 // Mongoose connection setup
 mongoose
@@ -23,6 +21,10 @@ const app = express();
 app.use(cors(["*", "http://localhost:4200"]));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// Routes
+const studentsRouter = require("./routes/students-route");
+const accountsRouter = require("./routes/accounts-route");
 
 // Route Middlewares
 app.use("/students", studentsRouter);

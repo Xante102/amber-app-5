@@ -7,9 +7,7 @@ import { AddStudentComponent } from './students/add-student/add-student.componen
 import { EditStudentComponent } from './students/edit-student/edit-student.component';
 import { StudentsListComponent } from './students/students-list/students-list.component';
 import { HttpClientModule } from '@angular/common/http';
-import { SearchStudentComponent } from './students/search-student/search-student.component';
 import { HomeComponent } from './home/home.component';
-import { HttpClient } from '@angular/common/http';
 import { StudentsService } from './services/students.service';
 import { ViewStudentComponent } from './students/view-student/view-student.component';
 import { AddAccountComponent } from './accounts/add-account/add-account.component';
@@ -23,7 +21,6 @@ import { ViewAccountComponent } from './accounts/view-account/view-account.compo
     StudentsListComponent,
     AddStudentComponent,
     EditStudentComponent,
-    SearchStudentComponent,
     HomeComponent,
     ViewStudentComponent,
     AddAccountComponent,
@@ -32,7 +29,13 @@ import { ViewAccountComponent } from './accounts/view-account/view-account.compo
     AccountsListComponent,
     ViewAccountComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule,  ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [StudentsService],
   bootstrap: [AppComponent],
 })

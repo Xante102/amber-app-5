@@ -8,26 +8,23 @@ import { Student } from '../../models/students.model';
   styleUrls: ['./students-list.component.css'],
 })
 export class StudentsListComponent implements OnInit {
-  studentsList! : Student[];
-
-
+  studentsList!: Student[];
 
   constructor(private studentsService: StudentsService) {}
 
-
-    // get all students from service
+  // get all students from service
   ngOnInit(): void {
     this.getStudentsList();
   }
 
   getStudentsList() {
-    this.studentsService.getStudents().subscribe(
-          students =>   this.studentsList = students
-           )
+    this.studentsService
+      .getStudents()
+      .subscribe((students) => (this.studentsList = students));
   }
 
-// delete student
-  deleteStudent(id:string):void {
+  // delete student
+  deleteStudent(id: string): void {
     this.studentsService.deleteStudent(id).subscribe({
       next: () => {
         console.log('Deleted student');
@@ -37,8 +34,7 @@ export class StudentsListComponent implements OnInit {
       },
       complete: () => {
         this.getStudentsList();
-      }
-    })
-  };
-
+      },
+    });
+  }
 }

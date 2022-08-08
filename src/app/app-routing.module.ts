@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddStudentComponent } from './students/add-student/add-student.component';
 import { EditStudentComponent } from './students/edit-student/edit-student.component';
 import { HomeComponent } from './home/home.component';
-import { SearchStudentComponent } from './students/search-student/search-student.component';
 import { StudentsListComponent } from './students/students-list/students-list.component';
 import { ViewStudentComponent } from './students/view-student/view-student.component';
 
@@ -13,9 +12,6 @@ const routes: Routes = [
   { path: 'add-student', component: AddStudentComponent },
   { path: 'view-student/:id', component: ViewStudentComponent },
   { path: 'edit-student/:id', component: EditStudentComponent },
-  { path: 'search', component: SearchStudentComponent }
-
-
 ];
 
 @NgModule({

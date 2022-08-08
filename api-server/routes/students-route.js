@@ -39,19 +39,6 @@ studentsRouter.route("/create").post((req, res) => {
   });
 });
 
-// View Students
-// studentsRouter.route("/:id").get((req, res) => {
-//   Student.findById(req.params.id, (err, students) => {
-
-//     if (err) {
-//       res.send({ status: 404, message: "Unable to locate student" });
-//     } else {
-//       res.json(students);
-//     }
-//     console.log(err);
-
-//   });
-// });
 
 // Update Existing Student
 studentsRouter.route("/:id").put((req, res) => {

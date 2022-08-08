@@ -11,19 +11,19 @@ export class ViewStudentComponent implements OnInit {
   studentId: string = '';
   studentDetails: any;
 
-  constructor(private activatedRoute: ActivatedRoute, private studentService: StudentsService) {}
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private studentService: StudentsService
+  ) {}
 
   ngOnInit() {
-
     this.activatedRoute.params.subscribe((student) => {
       this.studentId = student['id'];
-      if(this.studentId){
+      if (this.studentId) {
         this.studentService.viewStudent(this.studentId).subscribe((student) => {
           this.studentDetails = student;
         });
       }
     });
-
-  
   }
 }
